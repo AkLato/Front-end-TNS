@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="main.css" rel="stylesheet" />
+    <title>Uživatelé</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="column column1">
+          <table class="list" id="userList">
+            <thead>
+              <tr>
+                <h3>Uživatelé</h3>
+                <hr />
+              </tr>
+            </thead>
+            <tbody id="userObject"></tbody>
+          </table>
+        </td>
+        <td class="column column2">
+          <h3>Nastavení uživatele</h3>
+          <hr />
+          <form
+            onsubmit="event.preventDefault();onFormSubmit();"
+            autocomplete="off"
+          >
+            <div>
+              <label>Jméno vlastníka účtu</label>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                required
+                oninput="onFormUpdate()"
+              />
+            </div>
+            <div>
+              <label>Přihlašovací jméno</label>
+              <input
+                type="text"
+                name="loginName"
+                id="loginName"
+                required
+                oninput="onFormUpdate()"
+              />
+            </div>
+            <div>
+              <label>Role uživatele</label>
+              <select id="userRole" oninput="onFormUpdate()">
+                <option value="admin">administrátor</option>
+                <option value="user">uživatel</option>
+                <option value="dev">vývojář</option>
+              </select>
+            </div>
+            <div>
+              <label>AD účet</label>
+              <input
+                type="text"
+                name="adAccount"
+                id="adAccount"
+                required
+                oninput="onFormUpdate()"
+              />
+            </div>
+            <div class="formButton">
+              <input type="submit" value="Odeslat" />
+            </div>
+          </form>
+        </td>
+        <td class="column column1">
+          <table>
+            <thead>
+              <tr id="activity">
+                <h3>Aktivity</h3>
+                <hr />
+              </tr>
+            </thead>
+            <tbody id="activityList"></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

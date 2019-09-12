@@ -1,0 +1,65 @@
+body {
+  background: rgb(252, 235, 213);
+}
+table {
+  width: 100%;
+}
+.column {
+  height: 100vh;
+  background: #fff;
+  margin: 0.5rem;
+  border-radius: 7px;
+}
+.column1 {
+  width: 33%;
+}
+.column2 {
+  width: 20%;
+}
+.column3 {
+  width: 37%;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 16px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 33%;
+  background: #fff;
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  float: right;
+  border-radius: 4px;
+  cursor: pointer;
+  clear: both;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+  margin-right: 4px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0.25rem 0rem;
+}
